@@ -52,4 +52,25 @@ WITH_CUSTOMIZED_SYSCALL ?= true
 
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
 
+ALL_PRODUCTS = $(shell ls $(LOCAL_DIR)/product/)
+PRODUCTS = $(foreach t,$(ALL_PRODUCTS),$(basename $(t)))
+
+define PRINT_AVAILABLE_PRODUCTS
+    $(info )
+    $(info CAUTION!!!)
+    $(info Available products: $(PRODUCTS))
+    $(error Please use 'export TARGET_PRODUCT=xxx' to specify product name)
+    $(info )
+    $(info )
+endef
+
+ifeq ($(TARGET_PRODUCT),)
+    $(PRINT_AVAILABLE_PRODUCTS)
+else
+ifeq ($(findstring $(TARGET_PRODUCT),$(PRODUCTS)),)
+    $(info product $(TARGET_PRODUCT) not support)
+    $(PRINT_AVAILABLE_PRODUCTS)
+endif
+endif
+
 include  $(LOCAL_DIR)/product/$(TARGET_PRODUCT).mk
