@@ -1,6 +1,8 @@
 # compiled from source
 TRUSTY_ALL_USER_TASKS += \
-        sand/hwcrypto
+        sand/hwcrypto \
+        keymaster \
+        storage
 
 # TAs for debug build
 ifeq ($(LKDEBUG), 2)
