@@ -46,6 +46,7 @@ GLOBAL_DEFINES += \
 	EPT_DEBUG=1
 endif
 
+ENABLE_STATIC_LIB ?= true
 
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
 
