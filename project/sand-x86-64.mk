@@ -48,6 +48,8 @@ endif
 
 ENABLE_STATIC_LIB ?= true
 
+WITH_CUSTOMIZED_SYSCALL ?= true
+
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
 
 include  $(LOCAL_DIR)/product/$(TARGET_PRODUCT).mk
