@@ -59,18 +59,18 @@ define PRINT_AVAILABLE_PRODUCTS
     $(info )
     $(info CAUTION!!!)
     $(info Available products: $(PRODUCTS))
-    $(error Please use 'export TARGET_PRODUCT=xxx' to specify product name)
+    $(error Please use 'export TRUSTY_REF_TARGET=xxx' to specify product name)
     $(info )
     $(info )
 endef
 
-ifeq ($(TARGET_PRODUCT),)
+ifeq ($(TRUSTY_REF_TARGET),)
     $(PRINT_AVAILABLE_PRODUCTS)
 else
-ifeq ($(findstring $(TARGET_PRODUCT),$(PRODUCTS)),)
-    $(info product $(TARGET_PRODUCT) not support)
+ifeq ($(findstring $(TRUSTY_REF_TARGET),$(PRODUCTS)),)
+    $(info product $(TRUSTY_REF_TARGET) not support)
     $(PRINT_AVAILABLE_PRODUCTS)
 endif
 endif
 
-include  $(LOCAL_DIR)/product/$(TARGET_PRODUCT).mk
+include  $(LOCAL_DIR)/product/$(TRUSTY_REF_TARGET).mk
