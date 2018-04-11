@@ -50,6 +50,19 @@ ENABLE_STATIC_LIB ?= true
 
 WITH_CUSTOMIZED_SYSCALL ?= true
 
+WITH_CUSTOMIZED_BOOTSTRAP := true
+# 1 page reserved for platform data, please consult hypervisor for more info
+KERNEL_LOAD_OFFSET=0x1000
+
+CLANGBUILD := false
+
+# Overwrite toolchain prefix, plan to remove this marco in mixin of P dessert
+ARCH_x86_64_TOOLCHAIN_PREFIX :=
+
+TRUSTY_ANDROID_P := 1
+GLOBAL_DEFINES += \
+	TRUSTY_ANDROID_P=1
+
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
 
 ALL_PRODUCTS = $(shell ls $(LOCAL_DIR)/product/)
