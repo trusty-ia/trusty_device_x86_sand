@@ -2,6 +2,7 @@
 TRUSTY_ALL_USER_TASKS += \
         sand/hwcrypto \
         keymaster \
+        gatekeeper \
         storage
 
 # TAs for debug build
