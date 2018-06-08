@@ -59,10 +59,6 @@ CLANGBUILD := false
 # Overwrite toolchain prefix, plan to remove this marco in mixin of P dessert
 ARCH_x86_64_TOOLCHAIN_PREFIX :=
 
-TRUSTY_ANDROID_P := 1
-GLOBAL_DEFINES += \
-	TRUSTY_ANDROID_P=1
-
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
 
 ALL_PRODUCTS = $(shell ls $(LOCAL_DIR)/product/)
