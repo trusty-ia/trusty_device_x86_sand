@@ -37,7 +37,7 @@ TRUSTY_ALL_USER_TASKS :=
 
 # LK_DEBUGLEVEL=$(DEBUG), set DEBUG level as 1 to reduce logs
 # default DEBUG level is 2
-DEBUG = 1
+DEBUG ?= 1
 
 WITH_TRUSTY_IPC := true
 
