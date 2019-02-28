@@ -41,7 +41,7 @@ DEBUG ?= 1
 
 WITH_TRUSTY_IPC := true
 
-STACK_PROTECTOR ?= true
+STACK_PROTECTOR ?= false
 ASLR_OF_TA ?= true
 
 EPT_DEBUG ?= false
