@@ -1,6 +1,8 @@
 # compiled from source
 TRUSTY_ALL_USER_TASKS += \
-        keymaster
+	sand/hwcrypto \
+	storage \
+	keymaster \
 
 GLOBAL_DEFINES += PRINT_USE_MMIO=1
 GLOBAL_DEFINES += SERIAL_PCI_BUS=0
