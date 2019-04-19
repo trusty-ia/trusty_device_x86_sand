@@ -3,7 +3,9 @@ TRUSTY_ALL_USER_TASKS += \
         sand/hwcrypto \
         keymaster \
         gatekeeper \
-        storage
+        storage \
+	sample/ipc-unittest/main \
+	sample/ipc-unittest/srv
 
 # TAs for debug build
 ifeq ($(LKDEBUG), 2)
