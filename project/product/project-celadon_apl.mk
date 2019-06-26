@@ -16,6 +16,10 @@ TRUSTY_ALL_USER_TASKS += \
 
 endif
 
+TRUSTY_ALL_USER_TASKS += \
+        sample/ipc-unittest/main \
+        sample/ipc-unittest/srv
+
 GLOBAL_DEFINES += PRINT_USE_MMIO=0
 GLOBAL_DEFINES += PRINT_USE_IO_PORT=1
 GLOBAL_DEFINES += TARGET_SERIAL_IO_BASE=0x3f8
