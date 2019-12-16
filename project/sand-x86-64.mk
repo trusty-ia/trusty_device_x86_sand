@@ -55,8 +55,8 @@ ENABLE_STATIC_LIB ?= true
 WITH_CUSTOMIZED_SYSCALL ?= true
 
 WITH_CUSTOMIZED_BOOTSTRAP := true
-# 1 page reserved for platform data, please consult hypervisor for more info
-KERNEL_LOAD_OFFSET=0x1000
+
+KERNEL_LOAD_OFFSET=0x0
 
 
 EXTRA_BUILDRULES += app/trusty/user-tasks.mk
